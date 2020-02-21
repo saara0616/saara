@@ -4,11 +4,11 @@
 
 count=$(ls -1 | wc -l)
 
-function correct_guess {        # One function...
-    if [[ $1 -lt $2 ]]          # One if statement ...
+function correct_guess {        # Function...
+    if [[ $1 -lt $2 ]]          # if Statement
     then
 	echo "Too low!"
-    elif [[ $1 -gt $2 ]]
+    elif [[ $1 -gt $2 ]]	#elif statement
     then
 	echo "Too high!"
     else
@@ -17,7 +17,7 @@ function correct_guess {        # One function...
     fi
 }
 
-while [[ $count -ne $guess ]]    # One loop...
+while [[ $count -ne $guess ]]    # While loop...
 do
     read -p "Guess how many files are in the current directory? " guess
     # echo "You entered: $guess"
